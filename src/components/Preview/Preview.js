@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export default class CvPreview extends Component{
+export default class Preview extends Component{
     // constructor(){
     //     super();
     // }

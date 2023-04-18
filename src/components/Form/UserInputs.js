@@ -3,7 +3,7 @@ import GeneralInfo from "./GeneralInfo";
 import Education from "./Education";
 import Experience from "./Experience";
 import Button from'./Button';
-import "../styles/UserInputs.css"
+import "../../styles/UserInputs.css"
 
 export default class UserInputs extends Component{
     // constructor(){

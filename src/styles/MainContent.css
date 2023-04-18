@@ -1,4 +1,11 @@
 .main-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    justify-items: center;
+        
+}
+
+.main-content>div{
+    background-color: bisque;
+    width: 80%;
 }
