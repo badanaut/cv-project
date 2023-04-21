@@ -5,7 +5,7 @@
         
 }
 
-.main-content>div{
+.main-content>*{
     background-color: bisque;
     width: 80%;
 }
