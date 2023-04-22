@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import '../../styles/GeneralInfoForm.css'
+
 
 class GeneralInfoForm extends Component {
   constructor(props) {
@@ -8,10 +10,12 @@ class GeneralInfoForm extends Component {
         lastName: "", 
         email: "",
         phone:"",
-        selectedImage: null,
+        description:"",
+        
     };
 
     this.handleSubmitGeneral = this.handleSubmitGeneral.bind(this);
+    
   }
 
   handleSubmitGeneral(event) {
@@ -19,14 +23,28 @@ class GeneralInfoForm extends Component {
     const text = {firstName: this.state.firstName,
                   lastName: this.state.lastName,
                   email: this.state.email,
-                  phone: this.state.phone};
+                  phone: this.state.phone,
+                  description: this.state.description,
+    };
     this.props.handleGeneralInfo(text);
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmitGeneral}>
-        
+        <h3>Personal Information</h3>
+        <div>
+          <label 
+            htmlFor="image-upload" 
+            className="img-upload">
+            Select Profile Picture
+          </label>
+          <input 
+            type="file" 
+            onChange={this.props.handleImageChange} 
+            id="image-upload" 
+            className="img-upload"/>
+        </div>
         <input
             type="text"
             placeholder="First name"
@@ -50,10 +68,16 @@ class GeneralInfoForm extends Component {
             placeholder="Phone"
             value={this.state.phone}
             onChange={(event) => this.setState({ phone: event.target.value })}
-        />
-        
+        /> 
+        <textarea
+            placeholder="About me"
+            rows={3}
+            value={this.state.description}
+            onChange={(event) => this.setState({ description: event.target.value })}
+        />      
         <button type="submit">Submit</button>
       </form>
+      
     );
   }
 }

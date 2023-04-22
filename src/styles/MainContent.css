@@ -1,7 +1,8 @@
 .main-content{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
+    height: 80vh;
         
 }
 
@@ -9,3 +10,18 @@
     background-color: bisque;
     width: 80%;
 }
+
+.main-content>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, textarea{
+    width: 80%;
+}
+
+
+
+  

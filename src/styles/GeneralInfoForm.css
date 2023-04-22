@@ -1,0 +1,19 @@
+input[type='file'] {
+    display: none;
+}
+  
+.img-upload {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type='file']:focus + .img-upload {
+    outline: 1px dotted #000;
+}
+  
+input[type='file']:hover + .img-upload {
+    background-color: #aaa;
+}
